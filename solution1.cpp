@@ -1,4 +1,4 @@
-// string data¸¦ ÀÔ·Â¹Ş¾Æ 00:00-23:59 »çÀÌÀÇ ÁÖÂ÷¿ä±İ Á¤¸®
+// string dataë¥¼ ì…ë ¥ë°›ì•„ 00:00-23:59 ì‚¬ì´ì˜ ì£¼ì°¨ìš”ê¸ˆ ì •ë¦¬
 #include <map>
 #include <vector>
 #include <string>
@@ -6,9 +6,9 @@
 using namespace std;
 
 struct parkingInfo{
-	bool isParked = false;	//ÁÖÂ÷ ¿©ºÎ
-	int inTime;				//ÀÔÂ÷ ½Ã°£
-	int totalTime;			//ÁÖÂ÷ ½Ã°£
+	bool isParked = false; //ì£¼ì°¨ ì—¬ë¶€
+	int inTime; //ì…ì°¨ ì‹œê°„
+	int totalTime; //ì£¼ì°¨ ì‹œê°„
 };
 
 int hhmmToInt(const string hhmm) {
@@ -32,7 +32,7 @@ vector<int> solution(vector<int> fees, vector<string> records) {
 		stringstream ss(record);
 		string tmp, id, status;
 		ss >> tmp >> id >> status;
-		int		time = hhmmToInt(tmp);
+		int time = hhmmToInt(tmp);
 		
 		if (status == "IN") {
 			logs[id].isParked = true;
